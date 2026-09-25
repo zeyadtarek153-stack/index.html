@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- مهم جدًا عشان الصفحة تتظبط على شاشة الموبايل -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MY LOVER ❤️</title>
+
+    <style>
+
+        /* ==============================
+           الشكل الأساسي - اللاب
+        ============================== */
+
+        body {
+            background-image: url('hearts.png');
+            background-size: cover;
+            background-position: center;
+
+            margin: 0;
+            padding: 20px;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            color: #111;
+        }
+
+
+        /* الصورة */
+
+        .photo {
+            width: 300px;
+            height: auto;
+        }
+
+
+        /* العنوان */
+
+        h2 {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+
+        /* الرسالة */
+
+        .message {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        /* عنوان Why I love */
+
+        h3 {
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+
+        /* القائمة */
+
+        .reasons {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        /* زر الأغنية */
+
+        button {
+            font-size: 16px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+
+
+        /* =================================
+           الموبايل فقط
+        ================================= */
+
+        @media screen and (max-width: 600px) {
+
+            body {
+                padding: 15px 10px;
+
+                background-size: cover;
+                background-position: center top;
+            }
+
+
+            /* ==========================
+               تكبير الصورة
+            ========================== */
+
+            .photo {
+                width: 95%;
+                max-width: 500px;
+                height: auto;
+
+                margin-top: 5px;
+            }
+
+
+            /* ==========================
+               العنوان
+            ========================== */
+
+            h2 {
+                font-size: 30px;
+
+                line-height: 1.3;
+
+                margin: 25px 5px;
+            }
+
+
+            /* ==========================
+               الرسالة
+            ========================== */
+
+            .message {
+                font-size: 20px;
+
+                line-height: 1.7;
+
+                margin: 20px 5px;
+            }
+
+
+            /* ==========================
+               Why I love
+            ========================== */
+
+            h3 {
+                font-size: 27px;
+
+                line-height: 1.3;
+
+                margin-top: 35px;
+                margin-bottom: 25px;
+            }
+
+
+            /* ==========================
+               الأسباب
+            ========================== */
+
+            .reasons {
+                font-size: 19px;
+
+                line-height: 1.7;
+
+                padding-left: 28px;
+                padding-right: 5px;
+
+                text-align: left;
+            }
+
+
+            .reasons li {
+                margin-bottom: 10px;
+            }
+
+
+            /* ==========================
+               زر الأغنية
+            ========================== */
+
+            button {
+                font-size: 19px;
+
+                padding: 13px 20px;
+
+                border-radius: 10px;
+
+                background-color: white;
+
+                border: 1px solid #777;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================
+         الصورة
+    =========================== -->
+
+    <div style="text-align: center;">
+
+        <img
+            src="image.jpeg"
+            alt="MY love"
+            class="photo"
+        >
+
+    </div>
+
+
+
+    <!-- ==========================
+         العنوان
+    =========================== -->
+
+    <center>
+
+        <h2>
+            Hanoonty Is The Most Beautiful Girl In My Eyes ❤️
+        </h2>
+
+    </center>
+
+
+
+    <!-- ==========================
+         الرسالة
+    =========================== -->
+
+    <p class="message">
+
+        I love you so much. ❤️ Every moment I spend with you becomes one of my favorite memories.
+
+        You are such a beautiful, smart, and amazing girl, and I truly love everything about you.
+
+        I'm so happy to have you in my life, and I hope we can always share many more beautiful
+        moments together.
+
+    </p>
+
+
+
+    <!-- ==========================
+         Why I love Hanoonty
+    =========================== -->
+
+    <center>
+
+        <h3>
+            Why I love Hanoonty ❤️?
+        </h3>
+
+    </center>
+
+
+
+    <!-- ==========================
+         الأسباب
+    =========================== -->
+
+    <ul class="reasons">
+
+        <li>
+            Because my heart chose to love her.
+        </li>
+
+        <li>
+            She always makes me happy.
+        </li>
+
+        <li>
+            We always spend beautiful moments together.
+        </li>
+
+        <li>
+            Her soul is beautiful and can make everything around her beautiful, just like her.
+        </li>
+
+        <li>
+            She has eyes that poets could write poems about.
+        </li>
+
+        <li>
+            She is my beautiful غزالتي. 🦌❤️
+        </li>
+
+    </ul>
+
+
+
+    <!-- ==========================
+         الأغنية
+    =========================== -->
+
+    <div style="text-align: center; margin-top: 35px;">
+
+        <audio id="loveSong" loop>
+
+            <source src="song.mp3" type="audio/mpeg">
+
+            Your browser does not support audio.
+
+        </audio>
+
+
+        <button onclick="document.getElementById('loveSong').play()">
+
+            ❤️ Play Our Song ❤️
+
+        </button>
+
+    </div>
+
+
+</body>
+
+</html>
