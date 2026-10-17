@@ -30,11 +30,25 @@
         }
 
 
-        /* الصورة */
+        /* حاوية وضع الصورة والفيديو بجانب بعضهما */
 
-        .photo {
+        .media-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap; /* تضمن الانتقال للسطر التالي على الشاشات الصغيرة */
+        }
+
+
+        /* الصورة والفيديو */
+
+        .photo, .video-player {
             width: 300px;
             height: auto;
+            border-radius: 12px;
+            object-fit: cover;
         }
 
 
@@ -46,7 +60,16 @@
         }
 
 
-        /* الرسالة */
+        /* الرسالة والعبارة الخاصة بالعيون */
+
+        .eyes-quote {
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+            color: #8b0000;
+            margin: 20px auto;
+            font-weight: bold;
+        }
 
         .message {
             font-size: 16px;
@@ -70,7 +93,13 @@
         }
 
 
-        /* زر الأغنية */
+        /* مشغل الأغنية والزرار */
+
+        audio {
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 15px;
+        }
 
         button {
             font-size: 16px;
@@ -95,15 +124,19 @@
 
 
             /* ==========================
-               تكبير الصورة
+               تنسيق الصورة والفيديو للموبايل
             ========================== */
 
-            .photo {
+            .media-container {
+                gap: 15px;
+            }
+
+            .photo, .video-player {
                 width: 95%;
                 max-width: 500px;
                 height: auto;
 
-                margin-top: 5px;
+                margin-top: 10px;
             }
 
 
@@ -121,8 +154,14 @@
 
 
             /* ==========================
-               الرسالة
+               عبارة العيون والرسالة
             ========================== */
+
+            .eyes-quote {
+                font-size: 22px;
+                line-height: 1.5;
+                margin: 25px 10px;
+            }
 
             .message {
                 font-size: 20px;
@@ -169,8 +208,12 @@
 
 
             /* ==========================
-               زر الأغنية
+               مشغل الأغنية والزرار
             ========================== */
+
+            audio {
+                width: 90%;
+            }
 
             button {
                 font-size: 19px;
@@ -195,22 +238,6 @@
 
 
     <!-- ==========================
-         الصورة
-    =========================== -->
-
-    <div style="text-align: center;">
-
-        <img
-            src="image.jpeg"
-            alt="MY love"
-            class="photo"
-        >
-
-    </div>
-
-
-
-    <!-- ==========================
          العنوان
     =========================== -->
 
@@ -221,6 +248,16 @@
         </h2>
 
     </center>
+
+
+
+    <!-- ==========================
+         عبارة في حب العيون وصاحبتها
+    =========================== -->
+
+    <p class="eyes-quote">
+        "Lost in the depth of those mesmerizing eyes, I found a home, a universe, and the most beautiful soul I will love forever." ✨👁️❤️
+    </p>
 
 
 
@@ -290,12 +327,38 @@
 
 
     <!-- ==========================
-         الأغنية
+         قسم الميديا (الصورة والفيديو بجانب بعض)
+    =========================== -->
+
+    <div class="media-container">
+
+        <!-- الصورة (تأكد من اسم الصورة لديك) -->
+        <img
+            src="image2.jpeg"
+            alt="MY love"
+            class="photo"
+        >
+
+        <!-- الفيديو الخاص بك (ضع اسم ملف الفيديو بدلاً من your-video.mp4) -->
+        <video class="video-player" controls poster="image.jpeg">
+
+            <source src="video.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+
+
+    <!-- ==========================
+         الأغنية (مشغل الصوت) وزر التشغيل
     =========================== -->
 
     <div style="text-align: center; margin-top: 35px;">
 
-        <audio id="loveSong" loop>
+        <audio id="loveSong" controls loop>
 
             <source src="song.mp3" type="audio/mpeg">
 
@@ -303,6 +366,7 @@
 
         </audio>
 
+        <br>
 
         <button onclick="document.getElementById('loveSong').play()">
 
